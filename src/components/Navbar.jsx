@@ -1,8 +1,10 @@
 import styled from "styled-components"
 import {useState} from 'react';
+import ArrowRightRoundedIcon from '@material-ui/icons/ArrowRightRounded';
 
 const Container = styled.div`
-    background-color: #012840;
+    position: fixed;
+    background-color: #023859;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -11,8 +13,6 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
-
-    padding: 10px;
     width: 70%;
     display: flex;
     align-items: center;
@@ -20,57 +20,78 @@ const Wrapper = styled.div`
 `;
 
 const Left = styled.div`
-    width: 33%;
+    width: 50%;
 `;
 
 
 const Img = styled.img`
-width: 150px;
+top:15px;
+position: absolute;
+height: 70px;
+width: 350px;
 `;
 
-const Right = styled.div`
+const Right = styled.ul`
     display: flex;
-    justify-content: space-evenly;
-    width: 50%;
-    padding:10px;
-
+    width:30%;
+    list-style: none;
+    justify-content: start;
 `;
 
-const Links = styled.div`
-    font-size: 18px;
+const Links = styled.li` 
+    border-top: 5px  solid #ffffff0f;
+    padding:25px 15px;
+    font-size: 16px;
     font-weight: 400;
-    color: white;
+    color: #dfdfdf;
     cursor: pointer;
+    transition: 0.5s;
     &:hover{
-        font-weight: 500;
+        
+        border-top: 5px  solid #A62103;
+        color: white;
     }
-
 `;
 
 const Wrapper2 =styled.div`
-    background-color: #023859;
-    width: 100%;
-    flex-direction: row-reverse;
-`;
-
-const ListLinks = styled.div`
-    margin-right: 15%;
+    width: 70%;
     display: flex;
-    width: 30%;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: 400;
-    color: white;
-    cursor: pointer;
     align-items: center;
-    justify-content: space-evenly;
-    &:hover{
-        font-weight: 500;
-    }
+    justify-content: space-between;
 
 `;
 
+const Links2 = styled.li`
+    display: flex;
+    padding:10px 15px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #d4d4d4;
+    cursor: pointer;
+    &:hover{
+        color: white;;
+    }
+`;
 
+
+
+
+const SecondLine = styled.div`
+    width: 100%;
+    background-color: #024a77;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+`;
+
+const Link = styled.a`
+    float: none;
+    text-decoration: none;
+    color: #dfdfdf;
+    &:hover{
+        color: white;
+    }`;
 
 
 
@@ -80,30 +101,49 @@ const ListLinks = styled.div`
 const Navbar = () => {
     const [isShown, setIsShown] = useState(true);
 
-    const handleClick = event => {
-      // 👇️ toggle visibility
+    const handleClick = event => { 
       setIsShown(current => !current);
     };
+
+
   return (
     <Container>
         <Wrapper>
             <Left>
-            <Img src="https://i.ibb.co/jfvVnw4/MCG-2.png"/>
+            <Img src="https://i.imgur.com/9HKVrDX.png"/>
             </Left>
             <Right>
-                <Links onClick={handleClick}>Vehiculos</Links>
-                <Links>Vida</Links>
-                <Links>Alquileres</Links>
-                <Links>Contacto</Links>
+                <Links onClick={handleClick} style={{backgroundColor: isShown ? '#024a77' : '#023859e2'}}>vehiculos</Links>
+                <Links>
+                    <Link href="">vida</Link>
+                </Links>
+                <Links>
+                    <Link href="">alquileres</Link>
+                </Links>
+                <Links>
+                    <Link href="">contacto</Link>
+                </Links>
             </Right>
         </Wrapper>
-        <Wrapper2 style={{display: isShown ? 'flex' : 'none'}}>
-        <ListLinks >
-            <Links>Automoviles</Links>
-            <Links>Motocicletas</Links>
-            <Links>Camiones</Links>
-        </ListLinks>
-        </Wrapper2>
+        <SecondLine style={{display: isShown ? 'flex'  : 'none'}}>
+            <Wrapper2>
+                <Left></Left>
+                <Right>
+                <Links2>
+                    <Link href="">automoviles</Link>
+                    <ArrowRightRoundedIcon/>
+                </Links2>
+                <Links2>
+                    <Link href="">motocicletas</Link>
+                    <ArrowRightRoundedIcon/>
+                </Links2>
+                <Links2>
+                    <Link href="">camiones</Link>
+                    <ArrowRightRoundedIcon/>
+                </Links2>
+                </Right>
+            </Wrapper2>
+        </SecondLine>
     </Container>
   )
 }
