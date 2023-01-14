@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import {useState} from 'react';
 import ArrowRightRoundedIcon from '@material-ui/icons/ArrowRightRounded';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 const Container = styled.div`
     position: fixed;
@@ -25,10 +26,11 @@ const Left = styled.div`
 
 
 const Img = styled.img`
-top:15px;
-position: absolute;
-height: 70px;
-width: 350px;
+    top: -3px;
+    position: absolute;
+    height: 80px;
+    width: 350px;
+    cursor: pointer;
 `;
 
 const Right = styled.ul`
@@ -47,7 +49,7 @@ const Links = styled.li`
     cursor: pointer;
     transition: 0.5s;
     &:hover{
-        
+        background-color: #023c61;
         border-top: 5px  solid #A62103;
         color: white;
     }
@@ -68,8 +70,9 @@ const Links2 = styled.li`
     font-weight: 400;
     color: #d4d4d4;
     cursor: pointer;
+    transition: 0.5s;
     &:hover{
-        color: white;;
+        color: white;
     }
 `;
 
@@ -89,6 +92,7 @@ const Link = styled.a`
     float: none;
     text-decoration: none;
     color: #dfdfdf;
+    transition: 0.5s;
     &:hover{
         color: white;
     }`;
@@ -97,9 +101,8 @@ const Link = styled.a`
 
 
 
-
 const Navbar = () => {
-    const [isShown, setIsShown] = useState(true);
+    const [isShown, setIsShown] = useState(false);
 
     const handleClick = event => { 
       setIsShown(current => !current);
@@ -110,35 +113,38 @@ const Navbar = () => {
     <Container>
         <Wrapper>
             <Left>
-            <Img src="https://i.imgur.com/9HKVrDX.png"/>
+            <Img src="https://i.ibb.co/PGTPQGK/Logo.png"/>
             </Left>
             <Right>
-                <Links onClick={handleClick} style={{backgroundColor: isShown ? '#024a77' : '#023859e2'}}>vehiculos</Links>
-                <Links>
-                    <Link href="">vida</Link>
+                <Links onClick={handleClick} style={{backgroundColor: isShown ? '#024a77' : ''}}>
+                    <Link>Vehiculos </Link>
                 </Links>
                 <Links>
-                    <Link href="">alquileres</Link>
+                    <Link href="">Vida</Link>
                 </Links>
                 <Links>
-                    <Link href="">contacto</Link>
+                    <Link href="">Alquileres</Link>
+                </Links>
+                <Links>
+                    <Link href=""><MailOutlineIcon sx={{ fontSize: 45 }}/></Link>
                 </Links>
             </Right>
         </Wrapper>
+
         <SecondLine style={{display: isShown ? 'flex'  : 'none'}}>
             <Wrapper2>
                 <Left></Left>
                 <Right>
                 <Links2>
-                    <Link href="">automoviles</Link>
+                    <Link href="">Automoviles</Link>
                     <ArrowRightRoundedIcon/>
                 </Links2>
                 <Links2>
-                    <Link href="">motocicletas</Link>
+                    <Link href="">Motocicletas</Link>
                     <ArrowRightRoundedIcon/>
                 </Links2>
                 <Links2>
-                    <Link href="">camiones</Link>
+                    <Link href="">Camiones</Link>
                     <ArrowRightRoundedIcon/>
                 </Links2>
                 </Right>
