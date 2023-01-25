@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/mcg/static/js/main.e221f218.js",
+    "index.html": "/mcg/index.html",
+    "main.e221f218.js.map": "/mcg/static/js/main.e221f218.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.e221f218.js"
+  ]
+}
