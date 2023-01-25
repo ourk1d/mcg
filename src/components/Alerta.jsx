@@ -6,8 +6,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 
 const Container = styled.main`
-  height: 1000px;
-  background-color: #D2D3D9 ;
+  z-index: 2;
 `;
 
 
