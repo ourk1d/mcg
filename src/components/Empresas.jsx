@@ -22,7 +22,7 @@ const Wrapper = styled.div`
 
 const Img = styled.img`
     width: 110px;
-    margin: 10px;
+    margin:10px 20px 0px 20px;
     border-radius: 16px;
 `;
 
@@ -32,11 +32,11 @@ const Empresas = () => {
     <Container>
         <Title>Trabajamos con las mejores aseguradoras</Title>
         <Wrapper>
-            <Img src="https://i.ibb.co/6gLpfFH/1.png"/>
-            <Img src="https://i.ibb.co/8P4J5Pb/2.png"/>
-            <Img src="https://i.ibb.co/T1m7RHM/3.png"/>
-            <Img src="https://i.ibb.co/MST4ykd/4.png"/>
-            <Img src="https://i.ibb.co/N3MngvV/5.png"/>
+            <Img src="https://i.ibb.co/qFKBYnF/1.png"/> 
+            <Img src="https://i.ibb.co/frkFc76/2.png"/>
+            <Img src="https://i.ibb.co/vskH9q9/4.png"/>
+            <Img src="https://i.ibb.co/34FVCD1/5.png"/>
+            <Img src="https://i.ibb.co/5MsSqn6/6.png"/>
         </Wrapper>
     </Container>
   )
