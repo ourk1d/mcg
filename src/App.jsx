@@ -1,9 +1,11 @@
+import Cotizacion from "./pages/Cotizacion";
 import Home from "./pages/Home";
 
 
 
+
 const App = () => {
-  return <Home/>;
+  return <Cotizacion/>;
 };
 
 export default App;

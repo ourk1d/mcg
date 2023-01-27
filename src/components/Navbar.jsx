@@ -116,7 +116,9 @@ const Navbar = () => {
     <Container>
         <Wrapper>
             <Left>
-            <Img src="https://i.ibb.co/PGTPQGK/Logo.png"/>
+            <Link href={`/`}>
+                <Img src="https://i.ibb.co/PGTPQGK/Logo.png" />
+            </Link>
             </Left>
             <Right>
                 <Links onClick={handleClick} style={{backgroundColor: isShown ? '#024a77' : ''}}>
@@ -126,7 +128,7 @@ const Navbar = () => {
                     <Link href="">Vida</Link>
                 </Links>
                 <Links>
-                    <Link href="">Alquileres</Link>
+                    <Link >Alquileres</Link>
                 </Links>
                 <Links>
                     <Link href="">Agricolas</Link>
@@ -142,7 +144,7 @@ const Navbar = () => {
                 <Left></Left>
                 <Right>
                 <Links2>
-                    <Link href="">Automoviles</Link>
+                    <Link href={`/automoviles`}>Automoviles</Link>
                 </Links2>
                 <Links2>
                     <Link href="">Motocicletas</Link>
