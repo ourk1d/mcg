@@ -1,27 +1,18 @@
 import Cotizacion from "./pages/Cotizacion";
 import Home from "./pages/Home";
-
+import { Routes, Route } from "react-router-dom";
 
 
 const App = () => {
-  let page = (window.location.pathname.split('/')[2]);
-  switch (page) {
-    case "":
-      page = <Home/>
-      break
-    case "automoviles":
-      page = <Cotizacion/>
-      break
-      default:
-       page = <Home/>
-  }
+
   return (
-    <>
-    {page}
-    </>
-  )
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/automoviles" element={<Cotizacion />} />
+      </Routes>
+  );
 };
 
 
-console.log(window.location.pathname.split('/')[2])
+
 export default App;
