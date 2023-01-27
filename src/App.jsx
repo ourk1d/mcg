@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 const App = () => {
   
   let page 
-  switch (window.location.pathname.split("/")[1]) {
+  switch (window.location.pathname) {
     case "/mcg":
       page = <Home/>
       break
