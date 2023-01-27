@@ -116,7 +116,7 @@ const Navbar = () => {
     <Container>
         <Wrapper>
             <Left>
-            <Link href={`/mcg/`}>
+            <Link href={`/`}>
                 <Img src="https://i.ibb.co/PGTPQGK/Logo.png" />
             </Link>
             </Left>
@@ -144,10 +144,10 @@ const Navbar = () => {
                 <Left></Left>
                 <Right>
                 <Links2>
-                    <Link href={`/mcg/automoviles`}>Automoviles</Link>
+                    <Link href={`/automoviles`}>Automoviles</Link>
                 </Links2>
                 <Links2>
-                    <Link href={`/mcg/asasas`}>Motocicletas</Link>
+                    <Link href={`/mcg/automoviles`}>Motocicletas</Link>
                 </Links2>
                 <Links2>
                     <Link href="">Camiones</Link>
