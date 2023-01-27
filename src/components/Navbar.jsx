@@ -144,7 +144,7 @@ const Navbar = () => {
                 <Left></Left>
                 <Right>
                 <Links2>
-                    <Link href={`/mcg/automoviles`}>Automoviles</Link>
+                    <Link href={`/automoviles`}>Automoviles</Link>
                 </Links2>
                 <Links2>
                     <Link href="">Motocicletas</Link>
@@ -156,6 +156,8 @@ const Navbar = () => {
             </Wrapper2>
         </SecondLine>
     </Container>
+
+    
   )
 }
 
