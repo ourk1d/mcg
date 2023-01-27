@@ -4,13 +4,12 @@ import Home from "./pages/Home";
 
 
 const App = () => {
-  
-  let page 
-  switch (window.location.pathname) {
-    case "/mcg":
+  let page = (window.location.pathname.split('/')[2]);
+  switch (page) {
+    case "":
       page = <Home/>
       break
-    case "/mcg/automoviles":
+    case "automoviles":
       page = <Cotizacion/>
       break
       default:
@@ -23,5 +22,6 @@ const App = () => {
   )
 };
 
-console.log(window.location.pathname)
+
+console.log(window.location.pathname.split('/')[2])
 export default App;
