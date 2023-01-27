@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/ourk1d/mcg/static/js/main.71472726.js",
-    "index.html": "/ourk1d/mcg/index.html",
-    "main.71472726.js.map": "/ourk1d/mcg/static/js/main.71472726.js.map"
+    "main.js": "/mcg/static/js/main.b7fbc6b8.js",
+    "index.html": "/mcg/index.html",
+    "main.b7fbc6b8.js.map": "/mcg/static/js/main.b7fbc6b8.js.map"
   },
   "entrypoints": [
-    "static/js/main.71472726.js"
+    "static/js/main.b7fbc6b8.js"
   ]
 }
