@@ -11,7 +11,7 @@ import {
 const App = () => {
   return <Router>
   <Routes>
-    <Route path="/" element={<Home/>}>
+    <Route path='/' element={<Home/>}>
     </Route>
     <Route path='/automoviles' element={ <Cotizacion/>}>
     </Route>
