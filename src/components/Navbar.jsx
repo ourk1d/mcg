@@ -147,7 +147,7 @@ const Navbar = () => {
                     <Link href={`/automoviles`}>Automoviles</Link>
                 </Links2>
                 <Links2>
-                    <Link href="">Motocicletas</Link>
+                    <Link href={`/asasas`}>Motocicletas</Link>
                 </Links2>
                 <Links2>
                     <Link href="">Camiones</Link>

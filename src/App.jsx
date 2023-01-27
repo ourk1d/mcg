@@ -14,6 +14,7 @@ const App = () => {
       page = <Cotizacion/>
       break
       default:
+       page = <Home/>
   }
   return (
     <>
@@ -21,5 +22,5 @@ const App = () => {
     </>
   )
 };
-
+console.log(window.location.pathname)
 export default App;
